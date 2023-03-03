@@ -43,26 +43,43 @@
                   <span class="visually-hidden">Закрыть.</span>
                 </button>
                 <form class="popover-auth-form" action="https://echo.htmlacademy.ru/" method="post">
-                  <label class="visually-hidden" for="login-field">Поиск по сайту.</label>
-                  <input class="popover-auth-field login-field" type="text" id="login-field" name="login"
+                  <label class="visually-hidden" for="login-field">Логин.</label>
+                  <input class="field popover-auth-field login-field" type="text" id="login-field" name="login"
                     placeholder="Логин" required>
-                  <label class="visually-hidden" for="password-field">Поиск по сайту.</label>
-                  <input class="popover-auth-field password-field" type="password" id="password-field" name="password"
-                    placeholder="Пароль" required>
-                  <label class="control remember-me-control">
-                    <input class="control-input visually-hidden" type="checkbox" name="yes" checked>
-                    <span class="control-mark remember-me-control-mark"></span>
-                    <span class="control-label remember-me-label">Запомнить меня</span>
-                  </label>
-                  <a class="forget-password-link" href="#">Забыл пароль</a>
-                  <button class="popover-login-button green-button" type="submit">Войти</button>
-                  <button class="popover-reg-button" type="button">Регистрация</button>
+                  <label class="visually-hidden" for="password-field">Пароль.</label>
+                  <input class="field popover-auth-field password-field" type="password" id="password-field"
+                    name="password" placeholder="Пароль" required>
+                  <div class="popover-auth-links-wrapper">
+                    <label class="control remember-me-control">
+                      <input class="control-input visually-hidden" type="checkbox" name="remember me" checked>
+                      <span class="control-mark remember-me-control-mark"></span>
+                      <span class="control-label remember-me-label">Запомнить меня</span>
+                    </label>
+                    <a class="forget-password-link" href="#">Забыл пароль</a>
+                  </div>
+                  <div class="popover-auth-buttons-wrapper">
+                    <button class="popover-login-button green-button" type="submit">Войти</button>
+                    <button class="green-stroke-button popover-reg-button" type="button">Регистрация</button>
+                  </div>
                 </form>
               </div>
             </div>
           </div>
           <div class="logged-in log-hidden">
             <a class="user-name" href="#">Равшан Джамшутович</a>
+            <div class="popover popover-user">
+              <div class="popover-content">
+                <h2 class="popover-title">Здравствуйте, Равшан&nbsp;Джамшутович</h2>
+                <button class="popover-close-button" type="button">
+                  <span class="visually-hidden">Закрыть.</span>
+                </button>
+                <div class="popover-user-links-wrapper">
+                  <a class="popover-user-link" href="#">Мои заказы</a>
+                  <a class="popover-user-link" href="#">Личный кабинет</a>
+                </div>
+                <button class="green-stroke-button popover-user-logout-button" type="button">Выйти</button>
+              </div>
+            </div>
             <button class="logout-button" type="button">
               <span class="visually-hidden">Выйти.</span>
             </button>
@@ -70,7 +87,6 @@
         </div>
       </div>
       </div>
-
       <div class="navigation-wrapper">
         <nav class="navigation">
           <ul class="navigation-list">
@@ -96,7 +112,6 @@
               <a class="navigation-link" href="#">Контакты</a>
             </li>
           </ul>
-
           <div class="user-menu">
             <ul class="user-menu-list">
               <li class="user-menu-item">
@@ -139,17 +154,14 @@
             <h3 class="promo-block-title">Материалы</h3>
             <a class="promo-block-link" href="#">На любой вкус</a>
           </li>
-
           <li class="promo-list-item blue-promo-item promo-2">
             <h3 class="promo-block-title">Инструмент</h3>
             <a class="promo-block-link" href="#">На все случаи </a>
           </li>
-
           <li class="promo-list-item pink-promo-item promo-3">
             <h3 class="promo-block-title">Техника</h3>
             <a class="promo-block-link" href="#">Для стройки</a>
           </li>
-
           <li class="promo-list-item main-slider promo-4">
             <h3 class="slider-title">Дрели</h3>
             <p class="slider-description">Соседям на радость!</p>
@@ -162,13 +174,28 @@
               </button>
             </div>
             <a class="red-button slider-link" href="#">Открыть каталог</a>
+            <ol class="slider-pagination">
+              <li class="slider-pagination-item">
+                <button class="slider-pagination-button slider-pagination-button-current" type="button">
+                  <span class="visually-hidden">1 товар</span>
+                </button>
+              </li>
+              <li class="slider-pagination-item">
+                <button class="slider-pagination-button" type="button">
+                  <span class="visually-hidden">2 товар</span>
+                </button>
+              </li>
+              <li class="slider-pagination-item">
+                <button class="slider-pagination-button" type="button">
+                  <span class="visually-hidden">3 товар</span>
+                </button>
+              </li>
+            </ol>
           </li>
-
           <li class="promo-list-item green-promo-item promo-5">
             <h3 class="promo-block-title">Скидки 50%</h3>
             <a class="promo-block-link" href="#">На 350 товаров</a>
           </li>
-
           <li class="promo-list-item yellow-promo-item promo-6">
             <h3 class="promo-block-title">Доставка</h3>
             <a class="promo-block-link" href="#">Бесплатно</a>
@@ -270,7 +297,6 @@
               </form>
             </section>
           </div>
-
           <div class="catalog-right-column">
             <select class="select-control" name="sort">
               <option value="default">Сортировать</option>
@@ -286,7 +312,7 @@
                     height="180">
                   <div class="catalog-item-buttons">
                     <button class="buy-button" type="button">Купить</button>
-                    <button class="add-bookmark-button" type="button">В закладки</button>
+                    <button class="green-stroke-button add-bookmark-button" type="button">В закладки</button>
                   </div>
                   <h3 class="catalog-item-title">Перфоратор BOSCH BFG&nbsp;3000</h3>
                   <p class="catalog-item-price-old">22500 ₽</p>
@@ -304,7 +330,7 @@
                     height="180">
                   <div class="catalog-item-buttons">
                     <button class="buy-button" type="button">Купить</button>
-                    <button class="add-bookmark-button" type="button">В закладки</button>
+                    <button class="green-stroke-button add-bookmark-button" type="button">В закладки</button>
                   </div>
                   <h3 class="catalog-item-title">Перфоратор BOSCH BFG&nbsp;3000</h3>
                   <p class="catalog-item-price-old">22500 ₽</p>
@@ -322,7 +348,7 @@
                     height="180">
                   <div class="catalog-item-buttons">
                     <button class="buy-button" type="button">Купить</button>
-                    <button class="add-bookmark-button" type="button">В закладки</button>
+                    <button class="green-stroke-button add-bookmark-button" type="button">В закладки</button>
                   </div>
                   <h3 class="catalog-item-title">Перфоратор BOSCH BFG&nbsp;3000</h3>
                   <a class="catalog-item-price" href="#">15500 ₽
@@ -339,7 +365,7 @@
                     height="180">
                   <div class="catalog-item-buttons">
                     <button class="buy-button" type="button">Купить</button>
-                    <button class="add-bookmark-button" type="button">В закладки</button>
+                    <button class="green-stroke-button add-bookmark-button" type="button">В закладки</button>
                   </div>
                   <h3 class="catalog-item-title">Перфоратор BOSCH BFG&nbsp;3000</h3>
                   <a class="catalog-item-price" href="#">15500 ₽
@@ -356,7 +382,7 @@
                     height="180">
                   <div class="catalog-item-buttons">
                     <button class="buy-button" type="button">Купить</button>
-                    <button class="add-bookmark-button" type="button">В закладки</button>
+                    <button class="green-stroke-button add-bookmark-button" type="button">В закладки</button>
                   </div>
                   <h3 class="catalog-item-title">Перфоратор BOSCH BFG&nbsp;3000</h3>
                   <a class="catalog-item-price" href="#">15500 ₽
@@ -373,7 +399,7 @@
                     height="180">
                   <div class="catalog-item-buttons">
                     <button class="buy-button" type="button">Купить</button>
-                    <button class="add-bookmark-button" type="button">В закладки</button>
+                    <button class="green-stroke-button add-bookmark-button" type="button">В закладки</button>
                   </div>
                   <h3 class="catalog-item-title">Перфоратор BOSCH BFG&nbsp;3000</h3>
                   <p class="catalog-item-price-old">22500 ₽</p>
@@ -391,7 +417,7 @@
                     height="180">
                   <div class="catalog-item-buttons">
                     <button class="buy-button" type="button">Купить</button>
-                    <button class="add-bookmark-button" type="button">В закладки</button>
+                    <button class="green-stroke-button add-bookmark-button" type="button">В закладки</button>
                   </div>
                   <h3 class="catalog-item-title">Перфоратор BOSCH BFG&nbsp;3000</h3>
                   <p class="catalog-item-price-old">22500 ₽</p>
@@ -409,7 +435,7 @@
                     height="180">
                   <div class="catalog-item-buttons">
                     <button class="buy-button" type="button">Купить</button>
-                    <button class="add-bookmark-button" type="button">В закладки</button>
+                    <button class="green-stroke-button add-bookmark-button" type="button">В закладки</button>
                   </div>
                   <h3 class="catalog-item-title">Перфоратор BOSCH BFG&nbsp;3000</h3>
                   <p class="catalog-item-price-old">22500 ₽</p>
@@ -427,7 +453,7 @@
                     height="180">
                   <div class="catalog-item-buttons">
                     <button class="buy-button" type="button">Купить</button>
-                    <button class="add-bookmark-button" type="button">В закладки</button>
+                    <button class="green-stroke-button add-bookmark-button" type="button">В закладки</button>
                   </div>
                   <h3 class="catalog-item-title">Перфоратор BOSCH BFG&nbsp;3000</h3>
                   <a class="catalog-item-price" href="#">15500 ₽
@@ -440,7 +466,6 @@
                   </a>
                 </li>
               </ul>
-
               <div class="pagination-wrapper">
                 <ul class="pagination">
                   <li class="pagination-item">
@@ -518,7 +543,9 @@
     <footer class="footer">
       <div class="footer-wrapper">
         <div class="footer-left-column">
-          <img class="footer-logo" src="images/logo.svg" alt="Логотип Техномарт." width="220" height="50">
+          <a class="footer-logo-link" href="#">
+            <img class="footer-logo" src="images/logo.svg" alt="Логотип Техномарт." width="220" height="50">
+          </a>
           <address class="footer-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
           <a class="footer-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
           <ul class="footer-social-list">
@@ -566,12 +593,10 @@
             </li>
           </ul>
         </div>
-
         <div class="footer-right-column">
-          <p class="footer-feedback">Обратная связь:
+          <p class="footer-feedback">Обратная связь:<br>
             <a class="link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </p>
-
           <div class="footer-subscription">
             <p class="footer-subscription-text">Получайте лучшие предложения</p>
             <form class="footer-search" action="https://echo.htmlacademy.ru/" method="post">
@@ -585,7 +610,6 @@
           </div>
         </div>
       </div>
-
       <div class="footer-info-wrapper">
         <div class="footer-info">
           <p class="footer-copyright">© 2010–2019 Компания «Техномарт» Все права защищены</p>
