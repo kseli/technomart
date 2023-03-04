@@ -30,6 +30,11 @@
   font-display: swap;
 }
 
+img {
+  max-width: 100%;
+  object-fit: contain;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -54,6 +59,7 @@
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 2px;
+  text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   height: max-content;
@@ -130,7 +136,7 @@
 }
 
 body {
-  min-width: 1170px;
+  min-width: 1400px;
   margin: 0 auto;
   padding: 0;
   font-family: "PT sans", sans-serif;
@@ -236,7 +242,7 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-  margin-right: 33px;
+  margin: -5px 33px 0 0;
   max-width: 300px;
 }
 
@@ -425,6 +431,7 @@ body {
   background-position: center;
   border: none;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .logout-button:hover {
@@ -494,19 +501,19 @@ body {
 .user-menu {
   display: flex;
   flex-wrap: wrap;
-  width: 307px;
+  width: 310px;
   align-items: center;
   justify-content: end;
 }
 
 .user-menu-list {
-  margin: -7px 20px 0 0;
+  margin: -7px 24px 0 0;
   padding: 0;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: end;
-  gap: 10px;
+  gap: 16px;
 }
 
 .user-menu-link {
@@ -520,7 +527,7 @@ body {
   text-decoration: none;
   min-width: 25px;
   min-height: 25px;
-  padding: 22px 5px;
+  padding: 22px 4px;
   display: flex;
   gap: 8px;
   cursor: pointer;
@@ -574,6 +581,8 @@ body {
 }
 
 .promo-1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: promo-1;
   background-image: url("../images/materials-icon.svg");
   background-repeat: no-repeat;
@@ -581,6 +590,8 @@ body {
 }
 
 .promo-2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
   grid-area: promo-2;
   background-image: url("../images/tool-icon.svg");
   background-repeat: no-repeat;
@@ -588,6 +599,8 @@ body {
 }
 
 .promo-3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
   grid-area: promo-3;
   background-image: url("../images/technic-icon.svg");
   background-repeat: no-repeat;
@@ -595,10 +608,16 @@ body {
 }
 
 .promo-4 {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
   grid-area: promo-4;
 }
 
 .promo-5 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
   grid-area: promo-5;
   background-image: url("../images/sales-icon.svg");
   background-repeat: no-repeat;
@@ -606,6 +625,8 @@ body {
 }
 
 .promo-6 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 5;
   grid-area: promo-6;
   background-image: url("../images/delivery-icon.svg");
   background-repeat: no-repeat;
@@ -670,14 +691,28 @@ body {
   min-height: 390px;
   color: #ffffff;
   background-color: #452e1c;
-  background-image: url("../images/slider-image-1.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   padding: 50px 50px 41px;
   display: flex;
   flex-direction: column;
   position: relative;
+}
+
+.slide-1 {
+  background-image: url("../images/slider-image-1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.slide-2 {
+  background-image: url("../images/slider-image-2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hidden-slide {
+  display: none;
 }
 
 .slider-title {
@@ -799,7 +834,7 @@ body {
 }
 
 /* Filter */
-.filter-wrapper {
+.filter {
   width: 220px;
   margin-right: 80px;
 }
@@ -917,14 +952,14 @@ body {
 }
 
 /* Range inputs */
-.range-wrapper-inputs {
+.range-inputs-wrapper {
   display: flex;
   width: 220px;
   justify-content: space-between;
   position: relative;
 }
 
-.range-wrapper-inputs::after {
+.range-inputs-wrapper::after {
   content: "_";
   position: absolute;
   top: 0;
@@ -1061,6 +1096,7 @@ body {
   width: 280px;
   padding: 8px 16px;
   margin-bottom: 30px;
+  -webkit-appearance: none;
   appearance: none;
   cursor: pointer;
 }
@@ -1083,9 +1119,9 @@ body {
 .catalog-list {
   display: grid;
   grid-template-columns: 265px 270px 270px;
-  gap: 26px 33px;
+  gap: 25px 33px;
   list-style-type: none;
-  margin: 0 0 30px 0;
+  margin: 0 0 27px 0;
   padding: 0;
 }
 
@@ -1122,23 +1158,22 @@ body {
   line-height: 26px;
   text-align: center;
   color: #293449;
-  margin: 0 0 43px 0;
+  margin: 0 0 14px 0;
   padding: 0;
 }
 
 .catalog-item-price-old {
-  position: absolute;
-  bottom: 80px;
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 18px;
   text-align: center;
   letter-spacing: 2px;
+  -webkit-text-decoration-line: line-through;
   text-decoration-line: line-through;
   text-transform: uppercase;
   color: #a9a9a9;
-  margin: 0;
+  margin: 0 0 12px 0;
   padding: 0;
 }
 
@@ -1146,7 +1181,7 @@ body {
   width: 120px;
   box-sizing: border-box;
   padding: 11px 5px;
-  margin-left: -17px;
+  margin: auto 0 0 -17px;
   color: #ffffff;
   border-radius: 4px;
   font-weight: 700;
@@ -1196,8 +1231,9 @@ body {
   position: absolute;
   flex-direction: column;
   gap: 11px;
-  width: 215px;
-  height: 180px;
+  max-height: 215px;
+  width: fit-content;
+  max-width: 250px;
   background-color: rgb(255, 255, 255, 0.9);
   padding: 34px 40px 62px;
   box-sizing: border-box;
@@ -1231,7 +1267,6 @@ body {
 .buy-button:active {
   background-color: #518534;
 }
-
 
 /* Pagination */
 .pagination-wrapper {
@@ -1378,10 +1413,11 @@ body {
 /* About us */
 .about-us-wrapper {
   width: 1170px;
-  margin: 50px auto 44px;
+  margin: 53px auto 44px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  gap: 35px 0;
 }
 
 .about-us {
@@ -1439,7 +1475,7 @@ body {
   display: block;
   width: 220px;
   height: 50px;
-  margin-bottom: 21px;
+  margin-bottom: 25px;
 }
 
 .footer-logo-link:focus {
@@ -1451,7 +1487,7 @@ body {
   flex-wrap: wrap;
   list-style-type: none;
   padding: 0;
-  margin: 0 0 34px 0;
+  margin: 0 0 35px 0;
   gap: 5px;
 }
 
@@ -1578,6 +1614,13 @@ body {
   color: #bdbdbd;
 }
 
+.footer-email-field:disabled {
+  cursor: default;
+  color: #808080;
+  background: #f1f5f7;
+  opacity: 0.5;
+}
+
 .footer-email-field:focus {
   outline: 1px solid #ffbf47;
 }
@@ -1630,6 +1673,7 @@ body {
   line-height: 18px;
   margin: 0;
   padding: 0;
+  max-width: 500px;
 }
 
 .made-in-html {
@@ -1639,6 +1683,7 @@ body {
   line-height: 18px;
   margin: 0;
   padding: 0;
+  max-width: 500px;
 }
 
 /* Popover*/
